@@ -1,17 +1,14 @@
-let color = 'orange'
-
-document.querySelectorAll('.color').forEach(function (button) {
-    button.addEventListener('click', function (event) {
-        updatePlayerColor(event.target.id)
-        color = event.target.id
-    })
-})
+document.querySelectorAll(".color").forEach(function (button) {
+  button.addEventListener("click", function (event) {
+    updatePlayerColor(event.target.id);
+  });
+});
 
 document.onsubmit = (event) => {
-    localStorage.setItem('color', color)
-    event.preventDefault()
-    window.location.href = 'index.html'
-}
+  localStorage.setItem("color", currentColor);
+  event.preventDefault();
+  window.location.href = "index.html";
+};
 // Add a click event listener to each color button
 //for (let i = 0; i < colorButtons.length; i++) {
 //  colorButtons[i].addEventListener("click", function () {
