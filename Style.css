@@ -9,13 +9,7 @@ body {
   justify-content: center;
   height: 100vh;
 }
-.button {
-  background-color: lime;
-  font-size: 20px;
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-}
+
 .head {
   display: flex;
   position: relative;
@@ -147,8 +141,7 @@ body {
 .character {
   position: absolute;
   top: 0;
-  transform: translate(-50%, -50%);
-  transition: transform 0.2s ease-out;
+  transition: all 0.3s ease;
 }
 
 body {
@@ -156,6 +149,57 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 20%;
+}
+.button {
+  background-color: bisque;
+  font-size: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border: 2px solid #000;
+  border-radius: 50px;
+}
+#colorButtons {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+#backButton {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+.colorSquare {
+  width: 50px; /* This sets the width of the color squares */
+  height: 50px; /* This sets the height of the color squares */
+  margin: 10px; /* This adds space around each color button */
+  border: 2px solid #000; /* This adds a border around each color button */
+  border-radius: 10px; /* This makes the corners of the border rounded */
+  /* Add other styles as needed */
+}
+#redSquare {
+  background-color: orange;
+}
+
+#blueSquare {
+  background-color: #fffdd0;
+}
+
+#greenSquare {
+  background-color: rgb(33, 33, 33);
+}
+
+#timer {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border: 2px solid #000;
+  background-color: rgb(248, 214, 172);
+  font-family: Arial, sans-serif;
+  font-size: 20px;
 }
 
 #start {
@@ -171,11 +215,17 @@ body {
 }
 #pause,
 #restart {
+  background-color: bisque;
   width: 100px; /* Change the width */
   height: 50px; /* Change the height */
   margin: 10px; /* Add some space around the buttons */
+  border-radius: 25px; /* Add rounded borders */
 }
-
+#Character {
+  position: absolute;
+  left: 0; /* Add this line */
+  /* Other styles */
+}
 #button-container {
   display: flex; /* Add this line */
   position: absolute; /* Position the buttons absolutely */
