@@ -169,14 +169,9 @@ body {
   left: 40%;
 }
 
-#backButton {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-}
 .color {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 .colorSquare {
   width: 50px; /* This sets the width of the color squares */
