@@ -12,7 +12,7 @@ let timerInterval;
 let timeLeft = 20; // Start the timer at 20 seconds
 let timerElement = document.createElement("div"); // Create a new div element for the timer
 
-if (window.location.pathname !== "/Wardrobe.html") {
+if (window.location.pathname == "/Character.html") {
   timerElement.id = "timer"; // Give the timer element an id so you can style it with CSS
   timerElement.textContent = "Time left: " + timeLeft; // Set the initial text content of the timer element
   document.body.appendChild(timerElement); // Add the timer element to the body of the document
@@ -60,7 +60,11 @@ pauseButton.addEventListener("click", function () {
 document.getElementById("restart").addEventListener("click", function () {
   window.location.href = "Start.html"; // Navigate to the start page
 });
-
+if (timeLeft <= 0) {
+  clearInterval(timerInterval); // Stop the timer when it reaches 0
+  isGameRunning = false; // Pause the game
+  // You can add code here to end the game or do something else when the timer reaches 0
+}
 //-----Player------
 
 if (window.location.pathname !== "/Wardrobe.html") {
