@@ -24,7 +24,7 @@ if (window.location.pathname == "/Character.html") {
       clearInterval(timerInterval); // Stop the timer when it reaches 0
       // You can add code here to end the game or do something else when the timer reaches 0
     }
-  }, 1000); // Run the function every 1000 milliseconds (1 second)
+  }, 1000); // Run the function every 1000 milliseconds (1 second) nigger
 }
 
 // Get the pause button
