@@ -57,7 +57,7 @@ pauseButton.addEventListener("click", function () {
 });
 
 document.getElementById("restart").addEventListener("click", function () {
-  window.location.href = "Start.html"; // Navigate to the start page
+  window.location.href = "index.html"; // Navigate to the start page
 });
 if (timeLeft <= 0) {
   clearInterval(timerInterval); // Stop the timer when it reaches 0
