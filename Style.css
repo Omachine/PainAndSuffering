@@ -5,7 +5,6 @@
 }
 :root {
   --player-primary-color: orange;
-  --player-secundary-color: #7a0839;
   font-size: 1rem;
 }
 body {
@@ -174,6 +173,10 @@ body {
   position: absolute;
   top: 50%;
   left: 10%;
+}
+.color {
+    width: 30px;
+    height: 30px;
 }
 .colorSquare {
   width: 50px; /* This sets the width of the color squares */
