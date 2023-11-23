@@ -7,7 +7,7 @@ document.querySelectorAll(".color").forEach(function (button) {
 document.onsubmit = (event) => {
   localStorage.setItem("color", currentColor);
   event.preventDefault();
-  window.location.href = "Start.html";
+  window.location.href = "index.html";
 };
 // Add a click event listener to each color button
 //for (let i = 0; i < colorButtons.length; i++) {
