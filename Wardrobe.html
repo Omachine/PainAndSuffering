@@ -6,19 +6,67 @@
     <link rel="stylesheet" href="Character.css" />
   </head>
   <body>
-    <div id="Character"></div>
-    <div id="colorButtons">
-      <div id="redSquare" class="colorSquare"></div>
-      <div id="blueSquare" class="colorSquare"></div>
-      <div id="greenSquare" class="colorSquare"></div>
-      <!-- Add more squares as needed -->
+    <a href="Start.html" class="button backButton">Back</a>
+    <div class="Container">
+      <div class="Wardrobe">
+        <div class="wardrobe-container character-container">
+          <div id="CharacterWD" class="character">
+            <div class="head">
+              <div class="ears">
+                <div class="ear1"></div>
+                <div class="ear1 ear2"></div>
+              </div>
+              <div class="insideEars">
+                <div class="insideEar1"></div>
+                <div class="insideEar1 insideEar2"></div>
+              </div>
+              <div class="eyes">
+                <div class="eyes eye1"></div>
+                <div class="eye1 eye2"></div>
+              </div>
+              <div class="pupils">
+                <div class="pupil1"></div>
+                <div class="pupil2"></div>
+              </div>
+              <div class="mouth">
+                <div class="mouth mouth1"></div>
+                <div class="mouth mouth2"></div>
+              </div>
+              <div class="mouthBlocker"></div>
+            </div>
+            <div class="leg1"></div>
+            <div class="leg2"></div>
+          </div>
+        </div>
+        <div class="wardrobe-container colors">
+          <form>
+            <div id="input-group">
+              <input
+                type="button"
+                id="orange"
+                class="color"
+                style="background-color: #ffa500"
+              />
+              <input
+                type="button"
+                id="white"
+                class="color"
+                style="background-color: #fffdd0"
+              />
+              <input
+                type="button"
+                id="grey"
+                class="color"
+                style="background-color: #808080"
+              />
+            </div>
+            <div class="input-group">
+              <input type="submit" value="Confirm" class="button" id="submit" />
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-
-    <div id="backButton">
-      <a class="button" href="Start.html">Back</a>
-    </div>
-
-    <script src="Character.js"></script>
-    <!-- Link the JavaScript file for the character -->
+    <script src="Wardrobe.js"></script>
   </body>
 </html>

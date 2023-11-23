@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --player-primary-color: orange;
+  --player-secundary-color: #7a0839;
+  font-size: 1rem;
+}
 body {
   display: flex;
   align-items: center;
@@ -13,7 +18,7 @@ body {
 .head {
   display: flex;
   position: relative;
-  background-color: orange;
+  background-color: var(--player-primary-color);
   width: 150px;
   height: 122px;
   border-radius: 50%;
@@ -23,7 +28,7 @@ body {
   position: relative;
 }
 .ears .ear1 {
-  background-color: orange;
+  background-color: var(--player-primary-color);
   position: relative;
   left: -17px;
   top: -27px;
@@ -104,7 +109,7 @@ body {
 .mouth .mouth2 {
   width: 45px;
   height: 25px;
-  background: orange;
+  background-color: var(--player-primary-color);
   border-radius: 50%;
   border: 4px solid black;
 }
@@ -115,14 +120,14 @@ body {
   top: 83px; /* Adjust as needed */
   width: 90px;
   height: 13px;
-  background-color: orange; /* Change the color as desired */
+  background-color: var(--player-primary-color);
   z-index: 2; /* Makes the mouth appear on top of the face */
 }
 
 .leg1 {
   width: 20px;
   height: 43px;
-  background: orange;
+  background-color: var(--player-primary-color);
   border-radius: 50px / 25px;
   position: relative;
   left: 95px;
@@ -131,7 +136,7 @@ body {
 .leg2 {
   width: 20px;
   height: 50px;
-  background: orange;
+  background-color: var(--player-primary-color);
   border-radius: 50px / 25px;
   position: relative;
   left: 37px;
@@ -178,8 +183,13 @@ body {
   border-radius: 10px; /* This makes the corners of the border rounded */
   /* Add other styles as needed */
 }
+.input-group {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
 #redSquare {
-  background-color: orange;
+  background-color: #ffa500;
 }
 
 #blueSquare {
@@ -187,7 +197,7 @@ body {
 }
 
 #greenSquare {
-  background-color: rgb(33, 33, 33);
+  background-color: #808080;
 }
 
 #timer {
@@ -220,6 +230,16 @@ body {
   height: 50px; /* Change the height */
   margin: 10px; /* Add some space around the buttons */
   border-radius: 25px; /* Add rounded borders */
+}
+#CharacterWD {
+  position: absolute;
+  left: 60%; /* Add this line */
+  top: 40%; /* Add this line */
+  width: 170px;
+  height: 170px;
+  border: 2px solid black;
+  background-color: palevioletred;
+  /* Other styles */
 }
 #Character {
   position: absolute;

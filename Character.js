@@ -7,7 +7,6 @@ let y = 0;
 let Character = document.getElementById("character");
 let step = 150; // The number of pixels the character moves in each step
 let cooldown = false; // Flag to indicate whether the character is in cooldown
-let colorButtons = document.getElementsByClassName("colorSquare");
 let timerInterval;
 let timeLeft = 20; // Start the timer at 20 seconds
 let timerElement = document.createElement("div"); // Create a new div element for the timer
@@ -67,60 +66,46 @@ if (timeLeft <= 0) {
 }
 //-----Player------
 
-if (window.location.pathname !== "/Wardrobe.html") {
-  window.addEventListener("keydown", function (event) {
-    if (cooldown || !isGameRunning) return; // If the character is in cooldown or the game is paused, ignore the key press
+window.addEventListener("keydown", function (event) {
+  if (cooldown || !isGameRunning) return; // If the character is in cooldown or the game is paused, ignore the key press
 
-    let left = character.offsetLeft; // Current left position
-    let top = character.offsetTop; // Current top position
+  let left = character.offsetLeft; // Current left position
+  let top = character.offsetTop; // Current top position
 
-    switch (event.key) {
-      case "ArrowLeft": // If the left arrow key is pressed
-      case "a": // If the 'a' key is pressed
-        if (x != 0) {
-          x--;
-          character.style.left = left - step + "px";
-        }
-        break;
-      case "ArrowRight": // If the right arrow key is pressed
-      case "d": // If the 'd' key is pressed
-        if (x != 2) {
-          x++;
-          character.style.left = left + step + "px";
-        }
-        break;
-      case "ArrowUp": // If the up arrow key is pressed
-      case "w": // If the 'w' key is pressed
-        if (y != 0) {
-          y--;
-          character.style.top = top - step + "px";
-        }
-        break;
-      case "ArrowDown": // If the down arrow key is pressed
-      case "s": // If the 's' key is pressed
-        if (y != 2) {
-          y++;
-          character.style.top = top + step + "px";
-        }
-        break;
-    }
+  switch (event.key) {
+    case "ArrowLeft": // If the left arrow key is pressed
+    case "a": // If the 'a' key is pressed
+      if (x != 0) {
+        x--;
+        character.style.left = left - step + "px";
+      }
+      break;
+    case "ArrowRight": // If the right arrow key is pressed
+    case "d": // If the 'd' key is pressed
+      if (x != 2) {
+        x++;
+        character.style.left = left + step + "px";
+      }
+      break;
+    case "ArrowUp": // If the up arrow key is pressed
+    case "w": // If the 'w' key is pressed
+      if (y != 0) {
+        y--;
+        character.style.top = top - step + "px";
+      }
+      break;
+    case "ArrowDown": // If the down arrow key is pressed
+    case "s": // If the 's' key is pressed
+      if (y != 2) {
+        y++;
+        character.style.top = top + step + "px";
+      }
+      break;
+  }
 
-    cooldown = true; // Set the cooldown flag
+  cooldown = true; // Set the cooldown flag
 
-    setTimeout(function () {
-      cooldown = false; // Remove the cooldown after 1 second
-    }, 300);
-  });
-}
-
-// Get all color buttons
-
-// Add a click event listener to each color button
-for (let i = 0; i < colorButtons.length; i++) {
-  colorButtons[i].addEventListener("click", function () {
-    // When a color button is clicked, change the background color of the character to the background color of the clicked button
-    character.style.backgroundColor = window.getComputedStyle(
-      colorButtons[i]
-    ).backgroundColor;
-  });
-}
+  setTimeout(function () {
+    cooldown = false; // Remove the cooldown after 1 second
+  }, 300);
+});
