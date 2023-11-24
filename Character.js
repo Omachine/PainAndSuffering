@@ -22,15 +22,12 @@ if (window.location.pathname == "/Character.html") {
 
     if (timeLeft <= 0) {
       clearInterval(timerInterval); // Stop the timer when it reaches 0
-      // You can add code here to end the game or do something else when the timer reaches 0
     }
   }, 1000); // Run the function every 1000 milliseconds (1 second)
 }
 
-// Get the pause button
 let pauseButton = document.getElementById("pause");
 
-// Add a click event listener to the pause button
 pauseButton.addEventListener("click", function () {
   if (pauseButton.textContent === "Pause") {
     clearInterval(timerInterval); // Pause the timer
@@ -47,10 +44,9 @@ pauseButton.addEventListener("click", function () {
       if (timeLeft <= 0) {
         clearInterval(timerInterval); // Stop the timer when it reaches 0
         isGameRunning = false; // Pause the game
-        // You can add code here to end the game or do something else when the timer reaches 0
       }
     }, 1000);
-    console.log("Game continued", timerInterval); // Debugging line
+    //console.log("Game continued", timerInterval); // Debugging line
     pauseButton.textContent = "Pause"; // Change the button text back to "Pause"
     isGameRunning = true; // Continue the game
   }
@@ -62,7 +58,6 @@ document.getElementById("restart").addEventListener("click", function () {
 if (timeLeft <= 0) {
   clearInterval(timerInterval); // Stop the timer when it reaches 0
   isGameRunning = false; // Pause the game
-  // You can add code here to end the game or do something else when the timer reaches 0
 }
 //-----Player------
 
