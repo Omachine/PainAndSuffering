@@ -13,6 +13,20 @@ body {
   justify-content: center;
   height: 100vh;
 }
+@keyframes bruh {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(3px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
 .head {
   display: flex;
@@ -21,6 +35,9 @@ body {
   width: 150px;
   height: 122px;
   border-radius: 50%;
+  transform-origin: center;
+  animation: bruh 0.5s ease-out infinite;
+  z-index: 1;
 }
 .ears {
   display: flex;
@@ -131,6 +148,7 @@ body {
   position: relative;
   left: 95px;
   top: -15px;
+  z-index: 0;
 }
 .leg2 {
   width: 20px;
@@ -140,6 +158,8 @@ body {
   position: relative;
   left: 37px;
   top: -65px;
+  transform-origin: center;
+  z-index: 0;
 }
 
 .character {
@@ -163,23 +183,12 @@ body {
   border: 2px solid #000;
   border-radius: 50px;
 }
-#colorButtons {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-}
 
 .color {
   width: 30px;
   height: 30px;
 }
-.colorSquare {
-  width: 50px;
-  height: 50px;
-  margin: 10px; /* This adds space around each color button */
-  border: 2px solid #000; /* This adds a border around each color button */
-  border-radius: 10px; /* This makes the corners of the border rounded */
-}
+
 .input-group {
   margin-top: 2rem;
   display: flex;

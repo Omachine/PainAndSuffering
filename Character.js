@@ -22,6 +22,7 @@ if (window.location.pathname == "/Character.html") {
 
     if (timeLeft <= 0) {
       clearInterval(timerInterval); // Stop the timer when it reaches 0
+      isGameRunning = false;
     }
   }, 1000); // Run the function every 1000 milliseconds (1 second)
 }
